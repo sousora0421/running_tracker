@@ -1,4 +1,5 @@
 import RecordCard from "@/components/RecordCard";
+import Link from "next/link";
 
 export default function Home() {
   // サンプルデータ（心拍数とメモを追加しました）
@@ -50,9 +51,12 @@ export default function Home() {
       <div className="max-w-7xl mx-auto">
         <header className="flex justify-between items-center mb-8">
           <h1 className="text-2xl font-bold text-blue-600">Running Tracker</h1>
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+          <Link 
+            href="/record/new" 
+            className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition font-medium"
+          >
             記録を追加
-          </button>
+          </Link>
         </header>
 
         <section>
